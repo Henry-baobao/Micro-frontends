@@ -1,5 +1,3 @@
-# Runtime integration via javascript
-
 ## 介绍
 根据[*Martin Fowler*][1]介绍的[*Micro frontends*][2]及对应的example（[*github*][3]）,通过runtime integration via JavaScript方式实现Micro frontends.
 
