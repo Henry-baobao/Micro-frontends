@@ -27,7 +27,7 @@ functional component（**MicroFrontend**）的useLayoutEffect和class component(
 
 ### 3.useState([*don't over use state*][9])
 >It should be used to sync your state with something outside of React. Utilizing useEffect to sync two react states is rarely right.
-```
+```javascript
 //derived state, no-useless-state
   const total =
     Object.keys(quantities).length === 0
@@ -36,6 +36,14 @@ functional component（**MicroFrontend**）的useLayoutEffect和class component(
           (acc, menuItem) => acc + quantities[menuItem.item] * menuItem.price,
           0
         );
+```
+
+### 4.styled componnets
+本例中，micro frontend的公共库styled-components未提取，造成bundle冗余，导致styling problems.
+本例中解决方案
+```diff
+- import styled from 'styled-components'
++ import styled from 'styled-components/macro'
 ```
 
 ## 启动

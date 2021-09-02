@@ -71,7 +71,7 @@ const OrderButton = styled.button.attrs({ type: "button" })`
 `;
 
 const initialQuantities = (menu) => {
-  //console.log("initial from menu");
+  // console.log("initial from menu");
   return menu?.length > 0
     ? menu.reduce((acc, menuItem) => {
         return {
