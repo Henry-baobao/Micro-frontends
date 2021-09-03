@@ -1,0 +1,31 @@
+version: "2"
+services: 
+    nginx: 
+        image: nginx:1-alpine
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+        depends_on:
+            - container
+            - browse
+            - restaurant
+            - content
+    
+    container:
+        build: ./01-container
+        ports:
+            - "3000:3000"
+    
+    browse:
+        build: ./02-browse
+        ports:
+            - "3001:3001"
+    
+    restaurant:
+        build: ./03-restaurant
+        ports:
+            - "3002:3002"
+    
+    content:
+        build: ./04-content
+        ports:
+            - "5000:5000"

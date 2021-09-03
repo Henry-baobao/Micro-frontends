@@ -1,5 +1,5 @@
 {
-  "name": "02-browse",
+  "name": "03-restaurant",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "react-scripts build && serve -l 3001 --cors build",
+    "deploy": "react-scripts build && serve -l 3002 --cors build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
