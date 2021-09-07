@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.2.0",
     "cra-template": "1.1.2",
     "history": "^5.0.1",
     "prop-types": "^15.7.2",
@@ -17,12 +18,11 @@
     "source-map-explorer": "^2.5.2"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "react-scripts build && serve -l 3001 --cors build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "analyze": "craco build && source-map-explorer 'build/static/js/*.js'",
+    "start": "craco start",
+    "build": "craco build",
+    "deploy": "craco build && serve -l 3001 --cors build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [

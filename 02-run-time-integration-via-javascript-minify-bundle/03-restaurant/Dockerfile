@@ -4,6 +4,7 @@ RUN mkdir -p /code
 WORKDIR /code
 
 COPY package.json /code/
+COPY craco.config.js /code/
 COPY ./src /code/src
 COPY ./public /code/public
 COPY .env /code/

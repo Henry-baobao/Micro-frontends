@@ -2,7 +2,7 @@
 根据[*Martin Fowler*][1]介绍的[*Micro frontends*][2]及对应的example（[*github*][3]）,通过runtime integration via JavaScript方式实现Micro frontends.
 
 ## 注意事项
-未实现公共packages分离，导致各micro frontend打包后公共依赖包冗余。
+实现公共packages分离，减少各micro frontend打包后公共依赖包冗余。
 
 ## 第三方包
 + [*create-react-app*][4]
@@ -23,7 +23,6 @@ the browser has a chance to paint
 ### 2.useLayoutEffect vs componentWillUnmount
 functional component（**MicroFrontend**）的useLayoutEffect和class component(**MicroFrontendComponent**)的componentWillUnmount均可在浏览器repaint前实现DOM mutation。
 但本例中，多个micro frontend来回切换时，useLayoutEffect只在前几次执行return函数中的unmount方法，后面不执行；componentWillUnmount在micro frontend切换时均执行。
-详细原因，有待进一步研究？？？
 
 ### 3.useState([*don't over use state*][9])
 >It should be used to sync your state with something outside of React. Utilizing useEffect to sync two react states is rarely right.

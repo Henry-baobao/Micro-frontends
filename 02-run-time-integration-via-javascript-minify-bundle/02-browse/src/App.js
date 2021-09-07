@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import Filters from "./Filters";
 import RestaurantList from "./RestaurantList";
 
